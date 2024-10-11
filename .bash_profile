@@ -68,14 +68,14 @@ LIGHT_GREEN="\[\033[1;32m\]"
 
 
 # Initialize Conda Environment
-__conda_setup="$('/home/yeongwoo/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/yeongwoo/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/yeongwoo/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/yeongwoo/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
